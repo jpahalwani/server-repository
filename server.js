@@ -36,7 +36,7 @@ app.post('/newDraft', function(req, res){
         
     console.log(body.id + " " + body.nameOnCard + " " + body.hostName + " " + body.venue);
 
-    res.json({id: body.id});
+    res.json({"id": body.id});
 });
 
 //app.use(express.static(__dirname));
