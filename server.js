@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 //var mysql = require('mysql');
-//var bodyParser = require('body-parser');
-//var _ = require('underscore');
+var bodyParser = require('body-parser');
+var _ = require('underscore');
 // var con = mysql.createConnection({
 // 	host: "localhost",
 // 	user: "root",
@@ -29,15 +29,15 @@ app.get('/about',function(req,res){
     res.json({msg:"success jitesh"});
 });
 
-// app.post('/newDraft', function(req, res){
-//     var body = req.body;
+app.post('/newDraft', function(req, res){
+    var body = req.body;
     
-//     body = _.pick(body, 'id', 'nameOnCard', 'hostName', 'venue');
+    body = _.pick(body, 'id', 'nameOnCard', 'hostName', 'venue');
         
-//     console.log(body.id + " " + body.nameOnCard + " " + body.hostName + " " + body.venue);
+    console.log(body.id + " " + body.nameOnCard + " " + body.hostName + " " + body.venue);
 
-//     res.json(body);
-// });
+    res.json(body);
+});
 
 //app.use(express.static(__dirname));
 
