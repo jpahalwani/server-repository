@@ -26,7 +26,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.get('/about',function(req,res){
-    res.json({msg:"success"});
+    res.json({msg:"success jitesh"});
 });
 
 // app.post('/newDraft', function(req, res){
